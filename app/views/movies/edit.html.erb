@@ -1,0 +1,7 @@
+<h1>Edit movie</h1>
+<%= form_for @movie do |form|%>
+  <% form.label('title') %>
+  <%= form.text_field(:title) %>
+  <%= form.submit 'Edit movie' %>
+  <!--The submit html form for the edit page interacts with the update action-->
+<% end %>

@@ -1,0 +1,25 @@
+<h1>Movies</h1>
+<% @movies.each do |movie| %>
+  <h2><%= link_to movie.title, movie %></h2>
+  <!--I am linking the db record to the movies table. 
+  The Rails shortcut finds the record within the table and creates
+  the appropiate link to the show action.-->
+  <p>
+  <%= link_to 'Edit', edit_movie_path(movie) %> |
+  <!--I am creating a 'edit' link which will link to the
+  'edit_movie_path', and takes the movie argument which reprensents
+  the movies table-->
+  <%= link_to 'Delete', movie, method: :delete %>
+  <!--Destroy defines a DELETE route for '/:id' and not for '/'.
+      Due to this I 'link_to' needs to link to the delete path.
+      In this case the delete path would be 'movie'.-->
+      </p>
+  <hr />
+<% end %>
+<!--I am iterating through the movies table 
+and finding records from the title column.-->
+<p><%= link_to 'Add a new movie', new_movie_path %><p>
+<!--I am linking 'Add a new movie' to the new_movie_path,(rake routes-Prefix)
+which talks to the Movies controller's new action.-->
+<p><%= link_to 'Edit a movie', '' %><p>
+<p><%= link_to 'Delete a movie', '' %><p>
