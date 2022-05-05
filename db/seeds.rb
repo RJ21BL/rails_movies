@@ -17,8 +17,8 @@ Director.create!([
 ])
 
 Genre.create!([
-  {name: 'Crime/Drama'}, 
-  {name: 'Action/Comedy'}, 
+  {name: 'Crime/Drama'},
+  {name: 'Action/Comedy'},
   {name: 'Crime/Thriller'},
   {name: 'Science Fiction'},
   {name: 'Horror'}

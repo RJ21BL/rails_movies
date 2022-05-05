@@ -6,11 +6,9 @@ class Movie < ApplicationRecord
 
   # has_one :genre
   # #Each instance of Movie can fetch 1 Genre but not the opposite.
-  # has_many :genres
-  # #Each instance of Movie has 0 or more instances of Genre.
-  # belongs_to :genres, optional: true
   belongs_to :director, optional: true
   #Each instance of Movie belongs to 1 instance of Director.
+  
   #The Genre table will contain a column which represents
   #a reference to another table.
   belongs_to :genre, optional: true
