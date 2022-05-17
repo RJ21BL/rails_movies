@@ -5,9 +5,9 @@ load File.expand_path("setup.rb", __dir__)
 # e.g an array of multiply([2,4,6], 5) -> [10,20,30]
 
 def multiply(array, factor)
-  #
-  # fill me
-  #
+  array.map do |num|
+    num * factor
+  end
 end
 puts title("Task 1")
 puts multiply([2,4,6], 5) == [10,20,30] ? right : wrong
@@ -18,9 +18,10 @@ puts multiply([2.5,4.5], 3) == [7.5,13.5] ? right : wrong
 # now i want you to ROUND UP the answer before returning
 # e.g multiply([2.1,4.7], 2) -> [5,10]
 def multiply(array, factor)
-  #
-  # fill me
-  #
+  array.map do |num|
+    multiply = num * factor
+    multiply.ceil
+  end
 end
 puts title("Task 2")
 puts multiply([2,4,6], 5) == [10,20,30] ? right : wrong
@@ -31,10 +32,18 @@ puts multiply([2.1,4.7], 2) == [5,10] ? right : wrong
 # now i want you to filter the answer that is an even number
 # e.g multiply([2,3,4,5], 3) -> [9,15]
 
-def multiply(movie_name, director_name)
-  #
-  # fill me
-  #
+def multiply(array, factor)
+  odd_numbers = []
+  
+  array.map do |num|
+    multiply = num * factor
+    result = multiply.ceil
+
+    if result.odd?
+      odd_numbers << result
+    end
+  end
+  odd_numbers
 end
 puts title("Task 3")
 puts multiply([2,4,6], 5) == [] ? right : wrong
