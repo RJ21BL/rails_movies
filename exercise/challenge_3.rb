@@ -31,8 +31,8 @@ holiday_list = [
   [employee_id: 222, date: "2021-12-30"],
 ]
 
-def display_profiles(hr_profile, holiday_list, age, date)
-  # fill me
+def display_profiles(hr_profile, holiday_list, age:, date:)
+# fill me
 end
 
 # display_profiles(hr_profile, holiday_list, age: 65, date: Date.parse("30 Dec 2021"))
@@ -41,11 +41,11 @@ end
 # NCC:
 #   Scary Clown age 99 is working on the 30 Dec 2021
 
-# display_profiles(hr_profile, holiday_list, age: 22, date: Date.parse("29 Dec 2021"))
+# display_profiles(hr_profile, holiday_list, age: "22", date: Date.parse("29 Dec 2021"))
 # London:
-#   Peter Wu age 65 is not working on the 30 Dec 2021
-#   John Watson age 27 is working on the 30 Dec 2021
+#   Peter Wu age 65 is not working on the 29 Dec 2021
+#   John Watson age 27 is working on the 29 Dec 2021
 # Boston:
-#   John Smith age 24 is not working on the 30 Dec 2021
+#   John Smith age 24 is not working on the 29 Dec 2021
 # NCC:
-#   Scary Clown age 99 is working on the 30 Dec 2021
+#   Scary Clown age 99 is working on the 29 Dec 2021
